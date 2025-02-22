@@ -1,0 +1,38 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Don't delete this */
+@import "tailwindcss";
+
+/* Mr.Robot Font */
+@font-face {
+  font-family: 'mrRobot';
+  src: url('/font/MR\ ROBOT.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Font */
+  --font-robot: 'mrRobot';
+
+  /* Colors */
+  --color-cyan: #00FFFF;
+  --color-dark-blue: #000E41;
+  --color-gray: #ffffffbf;
+  --color-indigo: #0C37CF;
+}
+
+
+/* Don't delete this */
+@theme {
+  --font-robot: var(--font-robot);
+  --color-indigo: var(--color-cyan);
+  --color-cyan: var(--color-cyan);
+  --color-dark-blue: var(--color-dark-blue);
+  --color-gray: var(--color-gray);
+  --color-indigo: var(--color-indigo);
+}
+
+
+/* write Your Code Here */
