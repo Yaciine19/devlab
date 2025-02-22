@@ -7,16 +7,17 @@ import Program from "./Components/Program";
 import Register from "./Components/Register";
 import Sponsors from "./Components/Sponsors";
 
-
 export default function App() {
-  return<>
-  <Hero />
-  <About />
-  <Program />
-  <Judges />
-  <Sponsors />
-  <FAQs />
-  <Register />
-  <Footer />
-  </>;
+  return (
+    <>
+      <Hero />
+      <About />
+      <Program />
+      <Judges />
+      <Sponsors />
+      <FAQs />
+      <Register />
+      <Footer />
+    </>
+  );
 }

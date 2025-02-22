@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa6";
 
 const navigation = [
   { name: "Home", href: "#home" },
@@ -23,7 +24,7 @@ export default function Hero() {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-[poppins] text-white hover:text-cyan transition-colors duration-200">
+              <span className="text-2xl font-[poppins] font-bold text-white hover:text-cyan transition-colors duration-200">
                 DevHack
               </span>
             </a>
@@ -42,15 +43,15 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm/6 font-semibold text-white hover:text-cyan transition-colors duration-200"
+                className="text-md/6 font-semibold text-white hover:text-cyan transition-colors duration-200"
               >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white hover:text-cyan transition-colors duration-200">
-              Register <span aria-hidden="true">&rarr;</span>
+            <a href="#" className="text-md/6 font-semibold text-white hover:text-cyan transition-colors duration-200 group">
+              Register <FaArrowRight className="ml-1 text-white inline group-hover:transform group-hover:translate-x-[3px] transition group-hover:text-cyan duration-200" />
             </a>
           </div>
         </nav>
@@ -63,7 +64,7 @@ export default function Hero() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-dark-blue px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-              <span className="text-xl font-[poppins] text-white">
+              <span className="text-xl font-[poppins] text-white font-bold">
                 DevHack
               </span>
               </a>
@@ -77,12 +78,12 @@ export default function Hero() {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+                <div className="space-y-5 py-6">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-cyan hover:text-black transition-colors duration-200 ease-in-out"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-lg/7 font-medium text-white hover:bg-cyan hover:text-black transition-colors duration-200 ease-in-out"
                     >
                       {item.name}
                     </a>
@@ -100,8 +101,7 @@ export default function Hero() {
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-white ring-1 ring-white/50 hover:ring-white/100 transition duration-200">
               Lorem ipsum dolor sit amet consectetur.{" "}
               <a href="#" className="font-semibold text-cyan">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Read more <FaArrowRight className="inline" />
               </a>
             </div>
           </div>
@@ -122,8 +122,8 @@ export default function Hero() {
               >
                 Register Now
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white hover:text-cyan transition-colors duration-200">
-                Learn more <span>→</span>
+              <a href="#" className="text-sm/6 font-semibold text-white hover:text-cyan transition-colors duration-200 group">
+                Learn more <FaArrowRight className="ml-1 text-white inline group-hover:transform group-hover:translate-x-[3px] transition group-hover:text-cyan duration-200" />
               </a>
             </div>
           </div>
