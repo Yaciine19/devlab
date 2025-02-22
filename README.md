@@ -20,7 +20,7 @@ Before getting started, make sure you have the following tools installed:
 Download the project using the following command:
 ```bash
 git clone https://github.com/Yaciine19/devlab.git
-cd project-name
+cd devlab
 ```
 
 ### 📦 2.2 Install Dependencies
