@@ -4,14 +4,6 @@
 /* Don't delete this */
 @import "tailwindcss";
 
-/* Mr.Robot Font */
-@font-face {
-  font-family: 'mrRobot';
-  src: url('/font/MR\ ROBOT.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   /* Font */
   --font-robot: 'mrRobot';
@@ -26,7 +18,7 @@
 
 /* Don't delete this */
 @theme {
-  --font-robot: var(--font-robot);
+  --font-poppins: "Poppins", sans-serif;
   --color-indigo: var(--color-cyan);
   --color-cyan: var(--color-cyan);
   --color-dark-blue: var(--color-dark-blue);
