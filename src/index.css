@@ -28,3 +28,7 @@
 
 
 /* write Your Code Here */
+
+html {
+  scroll-behavior: smooth;
+}
