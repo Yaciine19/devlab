@@ -10,6 +10,10 @@
 
   /* Colors */
   --color-cyan: #00FFFF;
+  --color-blood-red: #710F11;
+  --color-dark-blood-red: #3b0000;
+  --color-very-dark-blood-red: #0b0000;
+  --color-yellow: #FCD610;
   --color-dark-blue: #000E41;
   --color-gray: #ffffffbf;
   --color-indigo: #0C37CF;
@@ -24,6 +28,11 @@
   --color-dark-blue: var(--color-dark-blue);
   --color-gray: var(--color-gray);
   --color-indigo: var(--color-indigo);
+
+  --color-yellow: var(--color-yellow);
+  --color-dark-blood-red: var(--color-dark-blood-red);
+  --color-blood-red: var(--color-blood-red);
+  --color-very-dark-blood-red: var(--color-very-dark-blood-red);
 }
 
 

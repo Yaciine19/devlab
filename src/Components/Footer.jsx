@@ -1,29 +1,27 @@
 export default function Footer() {
   return (
-    <footer className="bg-black font-poppins">
+    <footer className="bg-very-dark-blood-red font-poppins">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 ">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
             href="#"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+            className="flex justify-center mb-8 sm:mb-0"
           >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-              DevLab
-            </span>
+            <img src="/logo_vertical.svg" alt="DevLab Logo" className="w-30 md:w-40" />
           </a>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-400">
+          <ul className="flex flex-col sm:flex-row gap-5 items-center mb-6 text-sm font-medium sm:mb-0 text-gray-200">
             <li>
-              <div className="hover:underline me-4 md:me-6">
+              <div className="hover:underline">
               sesc.club@gmail.com
               </div>
             </li>
             <li>
-              <div className="hover:underline me-4 md:me-6">
+              <div className="hover:underline">
               +213 561 30 90 37
               </div>
             </li>
             <li>
-              <a href="https://taplink.cc/sesc" className="hover:underline me-4 md:me-6">
+              <a href="https://taplink.cc/sesc" className="hover:underline">
               Social Media
               </a>
             </li>

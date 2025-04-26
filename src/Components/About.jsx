@@ -4,7 +4,7 @@ import PrizeCard from "./PrizeCard";
 function Header() {
   return (
     <div className="text-center font-poppins">
-      <span className="text-cyan">HakLab Hakathon</span>
+      <span className="text-yellow">HakLab Hakathon</span>
       <h1 className="text-white text-2xl sm:text-4xl font-bold mt-5">
         About Hakathon
       </h1>
@@ -140,7 +140,7 @@ function CountdownTimer() {
 
 export default function About() {
   return (
-    <section id="about" className="bg-gradient-to-b from-[#000E41] from-17% to-black flex flex-col items-center justify-center min-h-screen py-20">
+    <section id="about" className="bg-gradient-to-b from-dark-blood-red to-very-dark-blood-red flex flex-col items-center justify-center min-h-screen py-20">
       <Header />
       <TextSection />
       <PrizeSection />

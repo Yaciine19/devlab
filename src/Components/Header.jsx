@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 const navigation = [
@@ -12,15 +12,33 @@ const navigation = [
 ];
 
 export default function Header() {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    function showBackgroundHeader() {
+      if (window.scrollY > 100) {
+        headerRef.current.classList.remove("bg-transparent");
+        headerRef.current.classList.add("bg-very-dark-blood-red");
+      } else {
+        headerRef.current.classList.remove("bg-very-dark-blood-red");
+        headerRef.current.classList.add("bg-transparent");
+      }
+    }
+
+    window.addEventListener("scroll", showBackgroundHeader);
+
+    return () => window.removeEventListener("scroll", showBackgroundHeader);
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header
+      ref={headerRef}
+      className="fixed bg-transparent inset-x-0 top-0 z-50 transition-colors duration-200"
+    >
       <nav className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-[poppins] font-bold text-white hover:text-cyan transition-colors duration-200">
-              DevLab
-            </span>
+          <a href="#">
+            <img src="/logo_vertical.svg" alt="DevLab Logo" className="w-30 md:w-40" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -37,7 +55,7 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-md/6 font-semibold text-white hover:text-cyan transition-colors duration-200"
+              className="text-md/6 font-semibold text-white hover:text-yellow transition-colors duration-200"
             >
               {item.name}
             </a>
@@ -45,11 +63,11 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
-            className="text-md/6 font-semibold text-white hover:text-cyan transition-colors duration-200 group"
+            href="#register"
+            className="text-md/6 font-semibold text-white hover:text-yellow transition-colors duration-200 group"
           >
             Register{" "}
-            <FaArrowRight className="ml-1 text-white inline group-hover:transform group-hover:translate-x-[3px] transition group-hover:text-cyan duration-200" />
+            <FaArrowRight className="ml-1 text-white inline group-hover:transform group-hover:translate-x-[3px] transition group-hover:text-yellow duration-200" />
           </a>
         </div>
       </nav>
@@ -59,12 +77,10 @@ export default function Header() {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-dark-blue px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-very-dark-blood-red px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="text-xl font-[poppins] text-white font-bold">
-                DevHack
-              </span>
+              <img src="/logo_vertical-02.svg" alt="DevLab Logo" />
             </a>
             <button
               type="button"
@@ -81,7 +97,8 @@ export default function Header() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-lg/7 font-medium text-white hover:bg-cyan hover:text-black transition-colors duration-200 ease-in-out"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-lg/7 font-medium text-white hover:bg-yellow hover:text-black transition-colors duration-200 ease-in-out"
                   >
                     {item.name}
                   </a>

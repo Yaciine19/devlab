@@ -3,7 +3,7 @@ import FAQItem from "./FAQItem";
 function Header() {
   return (
     <div className="text-center font-poppins mb-10">
-      <span className="text-cyan">HakLab Hakathon</span>
+      <span className="text-yellow">HakLab Hakathon</span>
       <h1 className="text-white text-2xl sm:text-4xl font-bold mt-5 px-4">
         Frequently Asked Questions
       </h1>
@@ -41,7 +41,7 @@ function Accordion() {
   ];
   return (
     <div className="font-poppins">
-      <div className=" px-6">
+      <div className="">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -52,7 +52,7 @@ function Accordion() {
 
 export default function FAQs() {
   return (
-    <section id="faqs" className="bg-gradient-to-b from-black to-[#000E41] flex flex-col items-center justify-center min-h-screen py-20">
+    <section id="faqs" className="bg-gradient-to-b from-very-dark-blood-red to-dark-blood-red flex flex-col items-center justify-center min-h-screen py-20 px-6 lg:px-12">
       <Header />
       <Accordion />
     </section>
