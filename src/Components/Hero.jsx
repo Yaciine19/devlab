@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function Hero() {
   return (
-    <section id="home" className=" relative">
+    <section id="home" className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-very-dark-blood-red to-dark-blood-red"></div>
       {/* <div className="absolute h-30 -bottom-10 bg-gradient-to-b from-black/80 to-dark-blue left-0 right-0"></div> */}
 
@@ -17,9 +17,9 @@ export default function Hero() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-3xl leading-13 sm:leading-20 text-balance sm:text-7xl font-poppins font-bold text-center text-white">
-              <span className="text-yellow">DevLab</span>{" "}
-              Hackathon 2025: Code Meets <span className="text-yellow">Chemistry</span>
+            <h1 className="text-4xl leading-13 sm:leading-20 text-balance sm:text-7xl font-poppins font-bold text-center text-white">
+              <span className="gradient">DevLab</span>{" "}
+              Hackathon 2025: Code Meets <span className="gradient">Chemistry</span>
             </h1>
             <p className="mt-8 md:w-[80%] mx-auto text-pretty font-poppins text-gray-300 sm:text-lg leading-8">
               This hackathon aims to foster collaboration between the fields of
@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#register"
-                className="rounded-md bg-yellow-500 px-9 py-3 text-sm font-semibold text-white shadow-xs hover:bg-yellow-400 transition-colors duration-200"
+                className="rounded-md bg-linear-45 from-[#fcd601] to-[#b34d57] px-9 py-3 text-sm font-semibold text-white shadow-xs"
               >
                 Register Now
               </a>
